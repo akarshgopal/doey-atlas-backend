@@ -34,6 +34,6 @@ config = {
     "default": DevConfig
 }
 
-frontend_site="https://doey-atlas.herokuapp.com/"
+frontend_site="https://doey-atlas.herokuapp.com"
 login_page = frontend_site + '/login'
 home_page = frontend_site + '/doey'
