@@ -26,10 +26,14 @@ class DevConfig(Config):
 
 class ProdConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'postgres://bshmgrkejlgotn:5ece12ee68b3873c94f6e26b3fbc6ff56ee2e7be06da7c207a056504bda48c5f@ec2-174-129-22-84.compute-1.amazonaws.com:5432/d1h8g0af3p6rag'
+    SQLALCHEMY_DATABASE_URI = 'postgres://yjgnltcyjcaejp:af3d3ea4585d9a7f0442851a1583e8dfdd0fd1666ef2ae1ef2edafb77d1a0f17@ec2-50-16-241-91.compute-1.amazonaws.com:5432/d1nq2oqs795e81'
 
 config = {
     "dev": DevConfig,
     "prod": ProdConfig,
     "default": DevConfig
 }
+
+frontend_site="https://doey-atlas.herokuapp.com/"
+login_page = frontend_site + '/login'
+home_page = frontend_site + '/doey'

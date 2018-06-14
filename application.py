@@ -29,7 +29,6 @@ from slots import *
 
 #------------------------------------------------------------------Config App--------------------------------------
 app = Flask(__name__, template_folder="../static", static_folder="../static/dist")
-frontend_site="http://localhost:3000"
 
 login_page = frontend_site + '/login'
 home_page = frontend_site + '/doey'
@@ -37,7 +36,7 @@ home_page = frontend_site + '/doey'
 cors = CORS(app, origins=frontend_site)
 #app = Flask(__name__, static_folder="../static/dist", template_folder="../static")
 #app._static_url_path = "../static/dist"
-app.config.from_object(config['dev'])
+app.config.from_object(config['prod'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 #app.config["SESSION_FILE_DIR"] = mkdtemp()
 #app.config["SESSION_PERMANENT"] = False          #forgets session after closing tab
@@ -421,7 +420,7 @@ def get_collabs():
             i.pop('_sa_instance_state')
     if not len(userlist[-1]):
         raise ValueError('No user found')
-        
+
     return jsonify(userlist)
 
 def datetime_to_milliseconds(date_time):
@@ -433,4 +432,4 @@ def datetime_to_milliseconds(date_time):
 
 #turn off debug when deploying
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
