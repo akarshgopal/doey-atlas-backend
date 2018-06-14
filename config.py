@@ -9,8 +9,7 @@ class Auth:
     CLIENT_ID = ('355555968186-5c3625bhidt1php2r43o99l54'
     '9b330pg.apps.googleusercontent.com')
     CLIENT_SECRET = 'PBuraFRzRNmjSuQBBFx-7HVE'
-    REDIRECT_URI = 'http://localhost:5000/gCallback'
-    #REDIRECT_URI = 'https://cryptic-atoll-57043.herokuapp.com/gCallback'
+    REDIRECT_URI = 'https://doey-atlas-back-end.herokuapp.com/doey'
     AUTH_URI = 'https://accounts.google.com/o/oauth2/auth'
     TOKEN_URI = 'https://accounts.google.com/o/oauth2/token'
     USER_INFO = 'https://www.googleapis.com/userinfo/v2/me'
